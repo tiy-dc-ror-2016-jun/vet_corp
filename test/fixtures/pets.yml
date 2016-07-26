@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Moose
+  species: Poodle
+  born_at: 2016-07-26 11:19:21
+  last_visit_on: 2016-07-26
+  fixed: false
+
+two:
+  name: Astro
+  species: Dog
+  born_at: 2016-07-26 11:19:21
+  last_visit_on: 2016-07-26
+  fixed: false
