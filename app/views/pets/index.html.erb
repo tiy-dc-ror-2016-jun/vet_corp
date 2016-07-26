@@ -1,0 +1,21 @@
+<h1>Pets @ VetCorp</h1>
+
+<% @pets.each do |pet| %>
+  <p>
+    <a href="/pets/<%= pet.id %>"><%= pet.name %></a>
+  </p>
+<% end %>
+
+<%= blargh %>
+
+<form action="/pets" method="post">
+  <input type="text" name="pet[name]" value="">
+  <input type="submit" name="submit" value="Save">
+</form>
+
+
+<%= form_tag("/pets", class: "") do  %>
+    <%# email_field_tag "pet[email]" %>
+    <%= text_field_tag "pet[name]" %>
+    <%= submit_tag %>
+<% end %>
