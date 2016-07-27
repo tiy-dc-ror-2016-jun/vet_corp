@@ -1,10 +1,16 @@
 <h1>Pets @ VetCorp</h1>
 
-<% @pets.each do |pet| %>
-  <p>
-    <%= link_to "#{pet.name}", pet_path(id: pet.id) %>
-  </p>
-<% end %>
+<table>
+  <tbody>
+    <% @pets.each do |pet| %>
+      <tr>
+        <td><%= link_to "#{pet.name}", pet_path(id: pet.id) %></td>
+        <td><%= link_to "Edit", edit_pet_path(id: pet.id) %></td>
+        <td><%= link_to "DESTROY!", pet_path(id: pet.id), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <!-- Rails form_tag helper  -->
 <%= form_tag("/pets", class: "") do  %>

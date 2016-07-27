@@ -9,4 +9,8 @@ class PetTest < ActiveSupport::TestCase
     moose = Pet.create!(name: "Moose")
     assert moose.persisted?
   end
+
+  def test_can_be_update
+    assert true
+  end
 end

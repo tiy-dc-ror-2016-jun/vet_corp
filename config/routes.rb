@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get '/pets' => "pets#index"
-  get '/pets/:id/edit' => "pets#edit"
+  get '/pets/:id/edit' => "pets#edit", as: :edit_pet
   get '/pets/:id' => "pets#show", as: :pet
-
+  patch '/pets/:id' => "pets#update"
+  delete '/pets/:id' => "pets#destroy"
   post '/pets' => "pets#create"
 
   # The priority is based upon order of creation: first created -> highest priority.

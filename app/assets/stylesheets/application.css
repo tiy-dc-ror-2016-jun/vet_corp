@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+   font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
+}
+main {
+  margin: 0 auto;
+  width: 800px;
+
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 2px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #ddd;
+
+  margin-bottom: 30px;
+}

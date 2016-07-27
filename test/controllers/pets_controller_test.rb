@@ -25,4 +25,46 @@ class PetsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  def test_can_update_pet
+    # Get a pet object that we are going to update
+    @pet = Pet.last
+
+    # Send a patch request to the update action with the following params
+    response = patch :update, {id: @pet.id, pet: {name: "Changed Name"}}
+
+    # Fetch the newest data from our data base
+    @pet.reload
+
+    # Validate that the name changed
+    assert_equal "Changed Name", @pet.name
+    assert_response :redirect
+  end
+
+  def test_can_delete_a_pet
+    @pet = Pet.last
+
+    response = delete :destroy, {id: @pet.id}
+
+    assert_response :redirect
+
+    assert_raises ActiveRecord::RecordNotFound do
+      @pet.reload
+      # or
+      # Pet.find(@pet.id)
+    end
+
+
+  end
+
 end
+
+
+
+
+
+
+
+
+
+
+#
