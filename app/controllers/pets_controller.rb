@@ -11,6 +11,12 @@ class PetsController < ApplicationController
     render :show
   end
 
+  def edit
+    @pet = Pet.find(params["id"])
+
+    render :edit # This happens by default
+  end
+
   def create
     # @pet = Pet.create(name: params["pet"]["name"])
     @pet = Pet.create(pet_params)

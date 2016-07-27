@@ -1,0 +1,26 @@
+<h1>Editing <%= @pet.name %></h1>
+
+<%= form_tag "" do %>
+  <%= text_field_tag "pet[name]", @pet.name, placeholder: "name of pet" %>
+  <%= submit_tag %>
+<% end %>
+
+<!-- Link to /pets using a named route -->
+<%= link_to "Back to all Pets", pets_path %>
+<!-- Link to /pets/:id for passed in ID-->
+<%= link_to "Back to #{@pet.name}", pet_path(id: @pet.id) %>
+
+<!-- Begin diagnostic Code  -->
+<pre>
+  <code>
+
+    prefix_url #=> "https://localhost:3000/pets"
+    prefix_path #=> "/pets"
+
+    pets_path #=> "<%= pets_path %>"
+    pets_url #=> "<%= pets_url %>"
+
+    <%= @pet.inspect %>
+  </code>
+</pre>
+<!-- End diagnostic Code  -->

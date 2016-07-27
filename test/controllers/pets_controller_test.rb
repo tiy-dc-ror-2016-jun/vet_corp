@@ -13,9 +13,16 @@ class PetsControllerTest < ActionController::TestCase
   end
 
 
-  def test_can_create_pet
-    response = post(:create)
+  test "can create a pet" do
+    response = post :create, {pet: {name: "Moose"}}
     assert_response :redirect
+  end
+
+  def test_can_present_edit_page_for_pet
+    @pet = Pet.last
+    response = get :edit, {id: @pet.id}
+
+    assert_response :success
   end
 
 end
