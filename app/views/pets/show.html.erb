@@ -11,6 +11,8 @@
   </p>
 <% end %>
 
+<%= link_to "Add Visit", new_visit_path(pet_id: @pet.id) %>
+
 <!-- Link to /pets using a named route -->
 <%= link_to "Back to all Pets", pets_path %>
 <!-- Link to /pets/:id/edit for passed in ID-->
