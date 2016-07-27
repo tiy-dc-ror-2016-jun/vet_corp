@@ -24,3 +24,14 @@ exit
 @pet.reload
 xit
 exit
+pet = Pet.find(8)
+pet.visits
+pet.vists.create(visited_on: Date.today, weight: 3.62874, notes: "none") 
+pet.visits.create(visited_on: Date.today, weight: 3.62874, notes: "none") 
+pet.visits.create(visited_on: Date.today, weight_in_kg: 3.62874, notes: "none") 
+exit
+@visit
+exit
+params
+params["visit"]
+exit!

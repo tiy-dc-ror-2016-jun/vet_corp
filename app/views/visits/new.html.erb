@@ -1,0 +1,19 @@
+<h1> New visits for <%= @pet.name %></h1>
+
+<%= form_for @visit, url: visits_path(pet_id: @pet.id) do |f| %>
+  <%= f.hidden_field :pet_id %>
+
+  <%= f.label :visited_on %>
+  <%= f.date_field :visited_on %>
+
+  <%= f.label :reason %>
+  <%= f.select :reason, ["Illness", "Crazy Owner"]%>
+
+  <%= f.label :weight_in_kg %>
+  <%= f.number_field :weight_in_kg, min: 0 %>
+
+  <%= f.label :notes %>
+  <%= f.text_area :notes %>
+
+  <%= f.submit %>
+<% end %>
