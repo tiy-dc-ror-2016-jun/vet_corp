@@ -5,23 +5,30 @@
     <% @pets.each do |pet| %>
       <tr>
         <td><%= link_to "#{pet.name}", pet_path(id: pet.id) %></td>
-        <td><%= link_to "Edit", edit_pet_path(id: pet.id) %></td>
-        <td><%= link_to "DESTROY!", pet_path(id: pet.id), method: :delete %></td>
         <td>
           <%= pet.last_visit_on %>
         </td>
+          <td>
+            <%= link_to "Edit", edit_pet_path(id: pet.id) %>
+            <%= link_to "DESTROY!", pet_path(id: pet.id), method: :delete %>
+          </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<%= form_for @new_pet do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
 <!-- Rails form_tag helper  -->
-<%= form_tag("/pets", class: "") do  %>
+<!-- <%= form_tag("/pets", class: "") do  %>
     <%# email_field_tag "pet[email]" %>
-    <!-- Rails text_field_tag helper -->
+    Rails text_field_tag helper
     <%= text_field_tag "pet[name]" %>
     <%= submit_tag %>
-<% end %>
+<% end %> -->
 
 <!-- Plain HTML Form -->
 <!--
