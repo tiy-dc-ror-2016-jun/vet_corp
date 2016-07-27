@@ -7,6 +7,9 @@
         <td><%= link_to "#{pet.name}", pet_path(id: pet.id) %></td>
         <td><%= link_to "Edit", edit_pet_path(id: pet.id) %></td>
         <td><%= link_to "DESTROY!", pet_path(id: pet.id), method: :delete %></td>
+        <td>
+          <%= pet.last_visit_on %>
+        </td>
       </tr>
     <% end %>
   </tbody>
