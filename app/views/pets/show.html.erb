@@ -1,14 +1,17 @@
 <h1>Records for <%= @pet.name %></h1>
 
 <h3>Visits</h3>
+
+<!-- Loop over @pet.vists # => [visit1, visit2] -->
 <% @pet.visits.each do |visit| %>
   <p>
     <%= visit.visited_on %>
     <strong>Notes:</strong>
     <%= visit.notes %>
-
   </p>
 <% end %>
 
-<a href="/pets/<%= @pet.id %>/edit">Edit <%= @pet.name %></a>
-<a href="/pets">Show pets</a>
+<!-- Link to /pets using a named route -->
+<%= link_to "Back to all Pets", pets_path %>
+<!-- Link to /pets/:id/edit for passed in ID-->
+<%= link_to "Edit #{@pet.name}", edit_pet_path(id: @pet.id) %>

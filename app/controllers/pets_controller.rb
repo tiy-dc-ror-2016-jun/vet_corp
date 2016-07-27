@@ -1,7 +1,7 @@
 class PetsController < ApplicationController
   def index
     @pets = Pet.all
-
+    @new_pet = Pet.new
     render :index
   end
 
