@@ -22,7 +22,10 @@ class PetsController < ApplicationController
   # Allow all keys in a params hash to be passed to an active record model
   #
   private def pet_params
-    params["pet"] # {name: "Gridley"}
+    # Hash style acccess for params
+    # params["pet"] # {name: "Gridley"}
+
+    # Strong params requiring a key to be present and allow
     params.require("pet").permit!
   end
 end
