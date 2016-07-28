@@ -12,12 +12,8 @@ class ClientTest < ActiveSupport::TestCase
   end
 
   test "client can have pets" do
-    client = Client.create!({name: "The Osbornes", email: "russell@theironyard.com" })
-
-    assert_equal [], client.pets
-
-    moose = Pet.create!(name: "Moose")
-    client.pets << moose
+    client = clients(:the_osbornes)
+    moose = pets(:moose)
 
     assert_equal [moose], client.pets
   end

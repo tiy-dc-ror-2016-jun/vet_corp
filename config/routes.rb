@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
-  get '/pets' => "pets#index"
-  get '/pets/:id/edit' => "pets#edit", as: :edit_pet
-  get '/pets/:id' => "pets#show", as: :pet
-  patch '/pets/:id' => "pets#update"
-  delete '/pets/:id' => "pets#destroy"
-  post '/pets' => "pets#create"
+  # get 'clients/index'
+  # get "/clients" => "clients#index"
+  resources :clients, only: [:index, :show]
+  # get '/pets' => "pets#index"
+  # get '/pets/:id/edit' => "pets#edit", as: :edit_pet
+  # get '/pets/:id' => "pets#show", as: :pet
+  # patch '/pets/:id' => "pets#update"
+  # delete '/pets/:id' => "pets#destroy"
+  # post '/pets' => "pets#create"
+
+  resources :pets
+
 
   get '/pets/:pet_id/visits/new' => "visits#new", as: :new_visit
   post '/pets/:pet_id/visits' => "visits#create", as: :visits

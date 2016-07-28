@@ -35,3 +35,26 @@ exit
 params
 params["visit"]
 exit!
+assigns
+assigns()
+exit
+Client.create(name: "The Osbornes")
+exit
+assigns
+assigns["clients"]
+exit
+assigns("client")
+assigns("clients")
+exit!
+client
+client.pets
+client.pets.first
+client.pets.first.visits
+exit
+session
+ls session
+session[:user_id] = 1 
+exit
+session
+session[:user_id]
+exit
