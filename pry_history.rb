@@ -58,3 +58,14 @@ exit
 session
 session[:user_id]
 exit
+Client
+@client = Client.last
+@client.class
+@client["name"]
+@client["name"] = "Other guys"
+@client
+{}["book"]
+{"book" => 1}["book"]
+a = {"book" => 1}
+a["book"]
+exit
