@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+joe:
+  email: johndoe@gmail.com
+  full_name: John Doe
+  last_logged_on_at: 2012-07-29 09:17:24
+
+jane:
+  email: janedoe@gmail.com
+  full_name: Jane Doe
+  last_logged_on_at: 2015-07-29 09:17:24
