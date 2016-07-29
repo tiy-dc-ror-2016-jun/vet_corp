@@ -1,6 +1,7 @@
 <h1>Welcome to Vet Corp</h1>
 
 <%= form_for @user, url: users_path do |f| %>
+  <!-- Display errors when something cant be saved -->
   <% @user.errors.full_messages.each do |msg| %>
     <p>
       <%= msg %>

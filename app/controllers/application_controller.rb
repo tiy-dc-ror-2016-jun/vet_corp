@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
+  # Check is a current_user is present otherwise redirect them. 
   def check_for_authorized_user
     unless current_user
       redirect_to login_path

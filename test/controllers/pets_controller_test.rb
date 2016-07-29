@@ -3,9 +3,11 @@ require 'test_helper'
 class PetsControllerTest < ActionController::TestCase
 
   def login_user
+    # Set a session from the test to fake a login
     session[:user_id] = users(:john).id
   end
 
+  # Login for all of the tests in this file
   def setup
     login_user
   end

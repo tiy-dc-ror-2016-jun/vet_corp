@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.sign_up(params["user"]["email"])
 
-    # THIS IS A HACK, you should take a has in signup and persist if valid
+    # THIS IS A HACK, you should take a hash in sign_up and persist if valid
     @user.update(full_name: params["user"]["full_name"])
 
     if @user.valid?
