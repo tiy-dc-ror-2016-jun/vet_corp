@@ -1,6 +1,15 @@
 require 'test_helper'
 
 class PetsControllerTest < ActionController::TestCase
+
+  def login_user
+    session[:user_id] = users(:john).id
+  end
+
+  def setup
+    login_user
+  end
+
   test "should get index" do
     response = get :index
     assert_response :success

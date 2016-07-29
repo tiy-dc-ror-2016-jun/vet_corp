@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-joe:
+john:
   email: johndoe@gmail.com
   full_name: John Doe
   last_logged_on_at: 2012-07-29 09:17:24

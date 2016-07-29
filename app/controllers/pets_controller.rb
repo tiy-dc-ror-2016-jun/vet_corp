@@ -1,4 +1,6 @@
 class PetsController < ApplicationController
+  before_action :check_for_authorized_user
+  
   def index
     @pets = Pet.all
     @new_pet = Pet.new

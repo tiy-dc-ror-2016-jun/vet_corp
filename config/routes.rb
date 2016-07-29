@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get '/login' => "sessions#new", as: :login
+  post '/login' => "sessions#create"
+  delete '/login' => "sessions#destroy"
+
+  resources :users, only: [:new, :create]
+
   # get 'clients/index'
   # get "/clients" => "clients#index"
   resources :clients, only: [:index, :show]

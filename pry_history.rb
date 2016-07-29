@@ -69,3 +69,5 @@ Client
 a = {"book" => 1}
 a["book"]
 exit
+User.all
+exit
