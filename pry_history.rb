@@ -71,3 +71,69 @@ a["book"]
 exit
 User.all
 exit
+params
+exit
+params
+current_page?
+current_page?("welcome#index")
+current_page?("/")
+current_page?("/pets")
+if params["controller"] == "welcome"&& params["action
+if params["controller"] == "welcome"&& params["action"] == "index"
+params["controller"] == "welcome"&& params["action"] == "index"
+exit
+params["controller"] == "welcome"&& params["action"] == "index"
+exit
+ls
+exit
+assigns
+assert_select("h3")
+assert_select("h3", 2)
+exit
+assert_select("#visits-today")
+assert_select("#visits-today").size
+assert_select("#visits-today","")
+assert_select("#visits-today","Visits Today")
+assert_equal(1,1)
+assert_select("#visits-today","ad")
+exit
+Date.today
+Date.today.class
+DateTime.now
+exit
+Date.today - 1.day
+Date.today - 1
+class String 
+  def speak_reverse
+    `say #{self.reverse}` 
+  end
+end
+"Russell".speak_reverse
+"Chris".speak_reverse
+"Alex".speak_reverse
+"Lisa".speak_reverse
+"Austen".speak_reverse
+"Erik".speak_reverse
+"Tony".speak_reverse
+"Ava".speak_reverse
+"Martin".speak_reverse
+"tony".speak_reverse
+"crhis".speak_reverse
+"chris".speak_reverse
+students = ["martin", "chris", "austen", "lisa", "ava", "erik", "alex", "tony"]
+students.each {|name| name.speak_reverse }
+students.join(", ")
+students.join(", ").speak_reverse
+students.join(". ").speak_reverse
+students.join(" . ").speak_reverse
+students.join(" . ")
+students.join(". ")
+exit
+Visit.find(1)
+Visit.where(visited_on: Date.today)
+exit
+Visit.where(visited_on: Date.today)
+assigns("visits_today")
+assigns(:visits_today)
+assigns
+exit!

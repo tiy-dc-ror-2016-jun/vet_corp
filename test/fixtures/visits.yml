@@ -2,14 +2,28 @@
 
 one:
   pet: moose
-  visited_on: 2016-0w-27
+  visited_on: 2016-01-27
   weight_in_kg: 20
   notes: MyText
   reason: illness
 
 two:
   pet: moose
-  visited_on: 2016-07-27
+  visited_on: <%= Date.today %>
   weight_in_kg: 30
   notes: MyText
   reason: fatness
+
+three:
+  pet: moose
+  visited_on: <%= 1.day.from_now %>
+  weight_in_kg: 40
+  notes: This is insane
+  reason: fatness
+
+four:
+  pet: moose
+  visited_on: <%= 3.day.from_now %>
+  weight_in_kg: 40
+  notes: has wings
+  reason: grew_wings

@@ -9,7 +9,7 @@
 <body>
 <main>
   <% if current_user %>
-    Current User email is <%= current_user.email %>
+    Welcome, <%= current_user.email.split("@").first %>
     <%= link_to "Log out", login_path, method: :delete %>
   <% else %>
     <%= link_to "Sign Up", new_user_path %>
@@ -18,11 +18,11 @@
 <%= yield %>
 
 <!-- PLay Code -->
-  <code>
-    Current User ID
-    <%= session[:user_id] %>
-    <%= current_user.inspect %>
-  </code>
+  <!-- <code> -->
+    <!-- Current User ID -->
+    <%# session[:user_id] %>
+    <%# current_user.inspect %>
+  <!-- </code> -->
 <!-- PLay Code -->
 
 </main>

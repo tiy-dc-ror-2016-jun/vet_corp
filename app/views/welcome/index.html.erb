@@ -1,0 +1,23 @@
+<h1>Welcome to Vet Corp</h1>
+
+<img src="http://placekitten.com/g/760/200" alt="" />
+
+<p>
+  Be strong and have much courage!
+</p>
+
+
+<section id="visits-today" >
+  <h3>Visits Today</h3>
+
+  <% @visits_today.each do |visit| %>
+    <p>
+      <%= visit.pet.name %>
+    </p>
+  <% end %>
+</section>
+
+
+
+<h3>Visits Yesterday</h3>
+<hr>
