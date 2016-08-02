@@ -1,13 +1,13 @@
 class SessionsController < ApplicationController
   def new
-    @user = User.new
+    # @user = User.new
   end
 
   def create
     # params["user"]["email"] # => "john@gmail.com"
     @user = User.find_by(email: params["user"]["email"])
 
-    if @user
+    if @user && @user.password == params["user"]["password"]
       # session = {}
       session[:user_id] = @user.id # => { user_id: 1 }
 

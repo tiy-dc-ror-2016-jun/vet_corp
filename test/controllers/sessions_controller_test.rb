@@ -7,7 +7,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   def test_can_login
-    post :create, {user: {email: "johndoe@gmail.com"}}
+    post :create, {user: {email: "johndoe@gmail.com", password: "janedoeiscute"}}
 
     # Make sure there is a session ID present
     refute_equal nil, session[:user_id]

@@ -1,139 +1,49 @@
-Pet
-Pet.all
-Pet.create(name: "Moose")
+User.create(email: "test")
+User.create!(email: "test")
 exit
-Pet.create(name: "Yuki")
+"Hello World"
+exit
+BCrypt::Password.create("test")
+a = _
+a
+BCrypt::Password.new("test")
+a == "test"
+a
+a == "test"
+a == "test1"
+BCrypt::Password.new("test123") == "123"
+BCrypt::Password.create("test123") == "123"
+a
+a.class
+a == "test123"
+exit
+BCrypt::Password.new("$2a$10$z8V539SlVuo802cBndQqrOOyz/MoevHmc/z50tfvm6RB15diW7RtK")
+BCrypt::Password.new("$2a$10$z8V539SlVuo802cBndQqrOOyz/MoevHmc/z50tfvm6RB15diW7RtK") == "test"
+exit
+BCrypt::Password.create("test123") == BCrypt::Password.create("test123")
+require 'bcrypt'
+BCrypt::Password.create("test123") == BCrypt::Password.create("test123")
+BCrypt::Password.create("test123")
+exit
+BCrypt::Password.create("test123")
+BCrypt::Password.create("test123") == BCrypt::Password.create("test123")
+BCrypt::Password.create("test123") == BCrypt::Password.new("$2a$10$X540nVwWGo08Wn6qUeDrwO4anVEWptUcui87Xlqsx5X5nTUEJ7SS.")
+BCrypt::Password.create("test123") == "test123"
+"$2a$10$X540nVwWGo08Wn6qUeDrwO4anVEWptUcui87Xlqsx5X5nTUEJ7SS." == "test123"
+BCrypt::Password.new("$2a$10$X540nVwWGo08Wn6qUeDrwO4anVEWptUcui87Xlqsx5X5nTUEJ7SS.") == "test123"
 exit
 params
-params["id"]
-Pet.find("1")
-Pet.find(params["id"])
+params["user"]
+params["user"]["password"]
 exit
-params
-params["pet"]
-params.class
-params.require("pet")
-params.require("pet").permit(:name)
-params.require("cbobo")
-exit
-@pet
-@pet.destroy
-@pet.delete?
-@pet.deleted?
-@pet.destroyed?
-@pet.reload
-xit
-exit
-pet = Pet.find(8)
-pet.visits
-pet.vists.create(visited_on: Date.today, weight: 3.62874, notes: "none") 
-pet.visits.create(visited_on: Date.today, weight: 3.62874, notes: "none") 
-pet.visits.create(visited_on: Date.today, weight_in_kg: 3.62874, notes: "none") 
-exit
-@visit
-exit
-params
-params["visit"]
+User.last
+User.last.password == "test"
+BCrypt::Password.new("HASHSTHING")
 exit!
-assigns
-assigns()
-exit
-Client.create(name: "The Osbornes")
-exit
-assigns
-assigns["clients"]
-exit
-assigns("client")
-assigns("clients")
-exit!
-client
-client.pets
-client.pets.first
-client.pets.first.visits
-exit
-session
-ls session
-session[:user_id] = 1 
-exit
-session
-session[:user_id]
-exit
-Client
-@client = Client.last
-@client.class
-@client["name"]
-@client["name"] = "Other guys"
-@client
-{}["book"]
-{"book" => 1}["book"]
-a = {"book" => 1}
-a["book"]
-exit
-User.all
-exit
-params
-exit
-params
-current_page?
-current_page?("welcome#index")
-current_page?("/")
-current_page?("/pets")
-if params["controller"] == "welcome"&& params["action
-if params["controller"] == "welcome"&& params["action"] == "index"
-params["controller"] == "welcome"&& params["action"] == "index"
-exit
-params["controller"] == "welcome"&& params["action"] == "index"
-exit
-ls
-exit
-assigns
-assert_select("h3")
-assert_select("h3", 2)
-exit
-assert_select("#visits-today")
-assert_select("#visits-today").size
-assert_select("#visits-today","")
-assert_select("#visits-today","Visits Today")
-assert_equal(1,1)
-assert_select("#visits-today","ad")
-exit
-Date.today
-Date.today.class
-DateTime.now
-exit
-Date.today - 1.day
-Date.today - 1
-class String 
-  def speak_reverse
-    `say #{self.reverse}` 
-  end
+User.all.each do |user|
+  user.password = "password"
 end
-"Russell".speak_reverse
-"Chris".speak_reverse
-"Alex".speak_reverse
-"Lisa".speak_reverse
-"Austen".speak_reverse
-"Erik".speak_reverse
-"Tony".speak_reverse
-"Ava".speak_reverse
-"Martin".speak_reverse
-"tony".speak_reverse
-"crhis".speak_reverse
-"chris".speak_reverse
-students = ["martin", "chris", "austen", "lisa", "ava", "erik", "alex", "tony"]
-students.each {|name| name.speak_reverse }
-students.join(", ")
-students.join(", ").speak_reverse
-students.join(". ").speak_reverse
-students.join(" . ").speak_reverse
-students.join(" . ")
-students.join(". ")
+User.all.each do |user|
+  user.update(password: "password")
+end
 exit
-Visit.find(1)
-Visit.where(visited_on: Date.today)
-exit
-Visit.where(visited_on: Date.today)
-assigns("visits_today")
-assigns(:visits_today)
-assigns
-exit!

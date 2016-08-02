@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vaccinations
   get 'welcome/index'
 
   get '/login' => "sessions#new", as: :login
